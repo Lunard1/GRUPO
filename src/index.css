@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Glowing pulsing aura for WhatsApp action buttons */
+  @keyframes whatsapp-pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.5), 0 10px 25px -5px rgba(245, 158, 11, 0.4);
+    }
+    50% {
+      transform: scale(1.035);
+      box-shadow: 0 0 0 14px rgba(245, 158, 11, 0), 0 20px 35px -5px rgba(245, 158, 11, 0.6);
+    }
+  }
+
+  @keyframes whatsapp-emerald-pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6), 0 10px 25px -5px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+      transform: scale(1.03);
+      box-shadow: 0 0 0 12px rgba(37, 211, 102, 0), 0 20px 35px -5px rgba(37, 211, 102, 0.5);
+    }
+  }
+
+  @keyframes mascot-float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-12px) rotate(0.8deg);
+    }
+  }
+
+  @keyframes mascot-aura {
+    0%, 100% {
+      opacity: 0.55;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.85;
+      transform: scale(1.08);
+    }
+  }
+
+  @keyframes coin-float-1 {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-16px) rotate(15deg);
+    }
+  }
+
+  @keyframes coin-float-2 {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-22px) rotate(-18deg);
+    }
+  }
+
+  @keyframes shimmer-sweep {
+    0% {
+      transform: translateX(-150%);
+    }
+    50%, 100% {
+      transform: translateX(150%);
+    }
+  }
+
+  @keyframes sparkle-pulse {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(0.8) rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2) rotate(45deg);
+    }
+  }
+
+  @keyframes radar-sweep {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-whatsapp-pulse {
+    animation: whatsapp-pulse 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-whatsapp-emerald-pulse {
+    animation: whatsapp-emerald-pulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-mascot-float {
+    animation: mascot-float 5s ease-in-out infinite;
+  }
+
+  .animate-mascot-aura {
+    animation: mascot-aura 4s ease-in-out infinite;
+  }
+
+  .animate-coin-1 {
+    animation: coin-float-1 3.5s ease-in-out infinite;
+  }
+
+  .animate-coin-2 {
+    animation: coin-float-2 4.2s ease-in-out infinite;
+  }
+
+  .animate-sparkle {
+    animation: sparkle-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-radar {
+    animation: radar-sweep 5s linear infinite;
+  }
+
+  .shimmer-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    animation: shimmer-sweep 3s infinite;
+  }
+
+  .glass-card {
+    background: rgba(11, 19, 43, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+  }
+
+  .glass-card-subtle {
+    background: rgba(7, 11, 20, 0.75);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}

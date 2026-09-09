@@ -1,0 +1,6 @@
+{
+  "name": "Cabra das Promos | Ofertas e Descontos",
+  "description": "Entre no Cabra das Promos e receba ofertas, descontos, cupons e achados selecionados diretamente no WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
