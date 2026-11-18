@@ -21,6 +21,7 @@ export interface CategoryItem {
 export interface WhatsAppGroup {
   id: number;
   name: string;
+  buttonText?: string;
   tag: string;
   url: string;
   highlight: string;
